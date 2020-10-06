@@ -2,12 +2,12 @@ package com.gmail.maystruks08.filmviewer.workers
 
 import android.content.Context
 import androidx.work.*
-import com.gmail.maystruks08.data.repository.SyncRunnersDataScheduler
+import com.gmail.maystruks08.data.repository.SyncDataScheduler
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
-class SyncRunnersWorkHelper @Inject constructor(context: Context) :
-    SyncRunnersDataScheduler {
+class SyncWorkHelper @Inject constructor(context: Context) :
+    SyncDataScheduler {
 
     private val mWorkManager: WorkManager = WorkManager.getInstance(context)
 
@@ -17,7 +17,7 @@ class SyncRunnersWorkHelper @Inject constructor(context: Context) :
             .build()
 
         val syncRunnersDataTaskWorkRequest = PeriodicWorkRequest
-            .Builder(SyncRunnersWorker::class.java, period, timeUnit)
+            .Builder(SyncWorker::class.java, period, timeUnit)
             .setConstraints(constraints)
             .setBackoffCriteria(BackoffPolicy.LINEAR, BACKOFF_DELAY_SECONDS, TimeUnit.SECONDS)
             .addTag(UPLOAD_RUNNER_DATA_WORK_TAG)

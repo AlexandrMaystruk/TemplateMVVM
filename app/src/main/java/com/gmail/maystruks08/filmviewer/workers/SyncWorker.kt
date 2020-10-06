@@ -11,7 +11,7 @@ import kotlinx.coroutines.coroutineScope
 import timber.log.Timber
 import javax.inject.Inject
 
-class SyncRunnersWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
+class SyncWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
 
     @Inject
     lateinit var defaultDao: DefaultDao
@@ -21,7 +21,7 @@ class SyncRunnersWorker(context: Context, params: WorkerParameters) : CoroutineW
 
     override suspend fun doWork(): Result = coroutineScope {
         Timber.i("Sync runners worker STARTED")
-        App.hostComponent?.inject(this@SyncRunnersWorker)
+        App.hostComponent?.inject(this@SyncWorker)
         val resultOfTask = ResultOfTask.build {
            //TODO do any action here
         }
