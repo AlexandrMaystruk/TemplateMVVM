@@ -1,2 +1,2 @@
 include ':app', ':data', ':domain'
-rootProject.name='Film Viewer'
+rootProject.name='FilmViewer'

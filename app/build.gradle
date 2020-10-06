@@ -78,7 +78,6 @@ dependencies {
     implementation presentationDependencies.lifecycleViewmodel
     implementation presentationDependencies.dagger
     implementation presentationDependencies.cicerone
-    implementation presentationDependencies.numberPicker
     implementation presentationDependencies.timber
 
 

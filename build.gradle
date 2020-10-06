@@ -12,7 +12,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.google.gms:google-services:4.3.3'
     }
 
     def globalConfiguration = rootProject.ext
@@ -155,25 +154,11 @@ ext {
     //https://developer.android.com/jetpack/androidx/releases/room
     roomVersion = '2.2.5'
 
-    //pdf
-    textPDFVersion = '5.5.10'
-
     //LeakCanary version
     leakCanaryVersion = '2.4'
 
     //navigation version
     ciceroneVersion = '4.0.2'
-
-    //fireStore version
-    firestoreVersion = '21.3.1'
-    firebaseUiVersion = '4.3.1'
-    firebaseAuthVersion = '17.0.0'
-
-    //xls parcer
-    xlsParcerVersion = '3.17'
-
-    //https://github.com/ShawnLin013/NumberPicker
-    numberPickerVersion = '2.4.8'
 
     //Timber for logs
     timberVersion = '4.7.1'
@@ -205,7 +190,6 @@ ext {
             lifecycleExtensions: "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
             lifecycleLivedata  : "androidx.lifecycle:lifecycle-livedata-ktx:$livedataVersion",
             lifecycleViewmodel : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
-            numberPicker       : "com.shawnlin:number-picker:${numberPickerVersion}",
             timber             : "com.jakewharton.timber:timber:${timberVersion}"
     ]
 
@@ -237,15 +221,9 @@ ext {
             room              : "androidx.room:room-ktx:${roomVersion}",
             roomCompiler      : "androidx.room:room-compiler:${roomVersion}",
             workManager       : "androidx.work:work-runtime-ktx:${workManagerVersion}",
-            itextpdf          : "com.itextpdf:itextg:${textPDFVersion}",
             corutinesCore     : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
             corutinesAndroid  : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
-            firebaseUi        : "com.firebaseui:firebase-ui-auth:${firebaseUiVersion}",
-            firebaseAuth      : "com.google.firebase:firebase-auth:${firebaseAuthVersion}",
-            firestore         : "com.google.firebase:firebase-firestore:${firestoreVersion}",
             timber            : "com.jakewharton.timber:timber:${timberVersion}",
-            xlsParcerApache   : "org.apache.poi:poi:${xlsParcerVersion}",
-            xlsParcerApacheXML: "org.apache.poi:poi-ooxml:${xlsParcerVersion}",
     ]
 
     dataTestDependencies = [
