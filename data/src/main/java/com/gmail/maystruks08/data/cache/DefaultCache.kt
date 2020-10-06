@@ -5,7 +5,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class RunnersCache @Inject constructor() {
+class DefaultCache @Inject constructor() {
 
     var defaultEntityList = mutableListOf<DefaultEntity>()
 

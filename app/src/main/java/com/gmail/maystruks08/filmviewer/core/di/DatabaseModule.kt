@@ -22,8 +22,5 @@ object DatabaseModule {
     @Singleton
     fun defaultDao(appDatabase: AppDatabase): DefaultDao = appDatabase.defaultDao()
 
-    @JvmStatic
-    @Provides
-    @Singleton
-    fun gson(): Gson = Gson()
+
 }

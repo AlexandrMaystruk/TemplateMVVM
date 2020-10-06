@@ -42,6 +42,8 @@ dependencies {
     implementation project(':domain')
 
     api dataDependencies.room
+    api dataDependencies.gson
+    api dataDependencies.retrofit
 
     api dataDependencies.workManager
 
@@ -52,6 +54,7 @@ dependencies {
     implementation dataDependencies.corutinesCore
     implementation dataDependencies.corutinesAndroid
     implementation dataDependencies.timber
+
 
 
     compileOnly dataDependencies.javaxInject

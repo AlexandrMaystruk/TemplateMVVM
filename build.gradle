@@ -37,7 +37,7 @@ buildscript {
 
         versionProps.store(versionPropsFile.newWriter(), null)
     }
-    
+
     task("increaseMajorVersion") {
         doLast {
             if (versionPropsFile.canRead()) {
@@ -154,6 +154,12 @@ ext {
     //https://developer.android.com/jetpack/androidx/releases/room
     roomVersion = '2.2.5'
 
+    //https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
+    retrofitVersion = '2.9.0'
+
+    //https://mvnrepository.com/artifact/com.google.code.gson/gson
+    gsonVersion = '2.8.6'
+
     //LeakCanary version
     leakCanaryVersion = '2.4'
 
@@ -201,11 +207,11 @@ ext {
     ]
 
     domainDependencies = [
-            javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
-            javaxInject    : "javax.inject:javax.inject:${javaxInjectVersion}",
-            corutinesCore     : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
-            corutinesAndroid  : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
-            kotlin         : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
+            javaxAnnotation : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject     : "javax.inject:javax.inject:${javaxInjectVersion}",
+            corutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            corutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
     ]
 
     domainTestDependencies = [
@@ -214,16 +220,18 @@ ext {
     ]
 
     dataDependencies = [
-            annotations       : "androidx.annotation:annotation:${androidXToolsVersion}",
-            javaxAnnotation   : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
-            javaxInject       : "javax.inject:javax.inject:${javaxInjectVersion}",
-            kotlin            : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
-            room              : "androidx.room:room-ktx:${roomVersion}",
-            roomCompiler      : "androidx.room:room-compiler:${roomVersion}",
-            workManager       : "androidx.work:work-runtime-ktx:${workManagerVersion}",
-            corutinesCore     : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
-            corutinesAndroid  : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
-            timber            : "com.jakewharton.timber:timber:${timberVersion}",
+            annotations     : "androidx.annotation:annotation:${androidXToolsVersion}",
+            javaxAnnotation : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject     : "javax.inject:javax.inject:${javaxInjectVersion}",
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            room            : "androidx.room:room-ktx:${roomVersion}",
+            roomCompiler    : "androidx.room:room-compiler:${roomVersion}",
+            workManager     : "androidx.work:work-runtime-ktx:${workManagerVersion}",
+            corutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            corutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
+            timber          : "com.jakewharton.timber:timber:${timberVersion}",
+            retrofit        : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            gson            : "com.google.code.gson:gson:${gsonVersion}"
     ]
 
     dataTestDependencies = [

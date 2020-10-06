@@ -1,6 +1,6 @@
 package com.gmail.maystruks08.data.repository
 
-import com.gmail.maystruks08.data.cache.RunnersCache
+import com.gmail.maystruks08.data.cache.DefaultCache
 import com.gmail.maystruks08.data.local.dao.DefaultDao
 import com.gmail.maystruks08.data.remote.DefaultApi
 import com.gmail.maystruks08.domain.entities.DefaultEntity
@@ -12,7 +12,7 @@ class DefaultRepositoryImpl @Inject constructor(
     private val networkUtil: NetworkUtil,
     private val defaultApi: DefaultApi,
     private val defaultDao: DefaultDao,
-    private val defaultCache: RunnersCache
+    private val defaultCache: DefaultCache
 ) : DefaultRepository {
     
     override suspend fun getEntityList(): List<DefaultEntity> {
