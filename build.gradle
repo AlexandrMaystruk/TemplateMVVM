@@ -113,13 +113,13 @@ ext {
 
     //Android
     androidBuildToolsVersion = "29.0.0"
-    androidXToolsVersion = "1.0.2"
+    androidXToolsVersion = "1.1.0"
     appCompatVersion = '1.0.0'
-    androidXAppCompatToolsVersion = "1.1.0"
+    androidXAppCompatToolsVersion = "1.2.5"
     androidMinSdkVersion = 21
     androidTargetSdkVersion = 29
     androidCompileSdkVersion = 29
-    androidCoreKTXVersion = "1.1.0"
+    androidCoreKTXVersion = "1.2.5"
 
     //{ Libraries }
 
@@ -179,6 +179,7 @@ ext {
             kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlin_version}",
             supportAndroid     : "androidx.legacy:legacy-support-v4:${appCompatVersion}",
             supportAppCompat   : "androidx.appcompat:appcompat:${appCompatVersion}",
+            fragment           : "androidx.fragment:fragment-ktx:${androidCoreKTXVersion}",
             supportDesign      : "com.google.android.material:material:${designVersion}",
             recyclerView       : "androidx.recyclerview:recyclerview:${androidXToolsVersion}",
             annotations        : "androidx.annotation:annotation:${androidXToolsVersion}",
@@ -196,6 +197,7 @@ ext {
             lifecycleExtensions: "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
             lifecycleLivedata  : "androidx.lifecycle:lifecycle-livedata-ktx:$livedataVersion",
             lifecycleViewmodel : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
+
             timber             : "com.jakewharton.timber:timber:${timberVersion}"
     ]
 
